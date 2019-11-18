@@ -1,0 +1,40 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{IAuthorOldInfo.name}} </h4>
+    <button type="button" class="close" (click)="d()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text ">Name</span>
+      </div>
+      <input [(ngModel)]="authorNewInfo.name" type="text" class="form-control" placeholder="Name">
+    </div>
+    <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Born</span>
+    </div>
+    <input [(ngModel)]="authorNewInfo.bornYear" type="number" class="form-control" placeholder="Age">
+  </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Die</span>
+      </div>
+      <input [(ngModel)]="authorNewInfo.dieYear" type="number" class="form-control" placeholder="Age">
+    </div>
+  </div>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text">About</span>
+    </div>
+    <textarea class="form-control" aria-label="With textarea" [(ngModel)]="authorNewInfo.about" ></textarea>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-info" (click)="c('Save click');sentAuthorNewInfoStep1()">Save</button>
+  </div>
+</ng-template>
+
+<fa name="edit" class="text-secondary edit-btn float-right mr-2" title="Edit" (click)="open(content)"></fa>
+

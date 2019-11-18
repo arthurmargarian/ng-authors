@@ -1,0 +1,26 @@
+<div class="card m-3 shadow-lg">
+  <div class="row no-gutters">
+    <div class="col-sm-12 col-lg-4">
+      <img src="{{IAuthor.imgPath}}"
+           class="card-img" alt="{{IAuthor.name}}">
+    </div>
+    <div class="col-sm-12 col-lg-8">
+      <app-edit-modal
+        (OSentAuthorNewInfoStep1)=sentAuthorNewInfoStep2($event);
+        [IAuthorOldInfo]="IAuthor"
+      ></app-edit-modal>
+      <div class="card-body" appShowToggle>
+        <h5 class="card-title">{{IAuthor.name}}</h5>
+        <p class="card-text"><small class="text-secondary font-italic">{{IAuthor.bornYear}}
+          -{{IAuthor.dieYear}}</small></p>
+        <p class="card-text" >{{IAuthor.about}}
+          <a href="{{IAuthor.imdbPath}}" class="text-secondary font-italic">See all bio</a>
+        </p>
+      <app-delete-modal
+        [IAuthor]="IAuthor"
+        (OAuthorID)="removeAuthor($event)"
+      ></app-delete-modal>
+      </div>
+    </div>
+  </div>
+</div>
