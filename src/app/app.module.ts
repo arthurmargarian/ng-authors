@@ -15,6 +15,9 @@ import {DeleteModalComponent} from './delete-modal/delete-modal.component';
 import { AuthorComponent } from './author/author.component';
 import { AuthorListComponent } from './author-list/author-list.component';
 import { ShowToggleDirective } from './show-toggle.directive';
+import { UsersComponent } from './users/users.component';
+import {HttpClientModule} from "@angular/common/http";
+import { RxjstestComponent } from './rxjstest/rxjstest.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,8 @@ import { ShowToggleDirective } from './show-toggle.directive';
     AuthorListComponent,
     AuthorListComponent,
     ShowToggleDirective,
+    UsersComponent,
+    RxjstestComponent,
 
   ],
   imports: [
@@ -36,6 +41,7 @@ import { ShowToggleDirective } from './show-toggle.directive';
     ToastrModule.forRoot(),
     AngularFontAwesomeModule,
     FilterPipeModule,
+    HttpClientModule,
   ],
   providers: [ConfirmationDialogService],
   entryComponents: [ConfirmationDialogComponent],
