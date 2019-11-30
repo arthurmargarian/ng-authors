@@ -5,19 +5,16 @@ import {FormsModule} from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ToastrModule} from 'ngx-toastr';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
+import {FilterPipeModule} from 'ngx-filter-pipe';
+import {HttpClientModule} from '@angular/common/http';
 import {ConfirmationDialogService} from './confirmation-dialog/confirmation-dialog.service';
-import {FilterPipeModule} from "ngx-filter-pipe";
 
 import {ConfirmationDialogComponent} from './confirmation-dialog/confirmation-dialog.component';
 import {AppComponent} from './app.component';
 import {EditModalComponent} from './edit-modal/edit-modal.component';
 import {DeleteModalComponent} from './delete-modal/delete-modal.component';
-import { AuthorComponent } from './author/author.component';
-import { AuthorListComponent } from './author-list/author-list.component';
-import { ShowToggleDirective } from './show-toggle.directive';
-import { UsersComponent } from './users/users.component';
-import {HttpClientModule} from "@angular/common/http";
-import { RxjstestComponent } from './rxjstest/rxjstest.component';
+import {AuthorComponent} from './author/author.component';
+import {AuthorListComponent} from './author-list/author-list.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +25,6 @@ import { RxjstestComponent } from './rxjstest/rxjstest.component';
     AuthorComponent,
     AuthorListComponent,
     AuthorListComponent,
-    ShowToggleDirective,
-    UsersComponent,
-    RxjstestComponent,
-
   ],
   imports: [
     BrowserModule,

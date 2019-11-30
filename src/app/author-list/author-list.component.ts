@@ -66,14 +66,13 @@ export class AuthorListComponent {
       about: 'Born to noble parents (his father Sergei was a retired major, and his mother, Nadezhda, was the granddaughter of an ennobled Ethiopian general) on the 26th of May, 1799.'
     }
   ];
-  userFilter: any = { name: '' };
+  userFilter: any = {name: ''};
 
   removeAuthor(id) {
     this.authors = this.authors.filter(author => author.id !== id);
   }
 
   setNewInfo(newInfo) {
-    console.log(newInfo)
     this.authors.forEach((a, b) => {
       if (a.id === newInfo.id) {
         try {
@@ -92,12 +91,6 @@ export class AuthorListComponent {
   }
 
   openCreateModal() {
-    alert('create modal')
-  }
-
-  searchAuthor(e) {
-    // console.log(e.target.value)
-
-    console.log(this.authors)
+    alert('create modal...dev phase');
   }
 }

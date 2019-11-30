@@ -9,17 +9,17 @@
         (OSentAuthorNewInfoStep1)=sentAuthorNewInfoStep2($event);
         [IAuthorOldInfo]="IAuthor"
       ></app-edit-modal>
-      <div class="card-body" appShowToggle>
+      <div class="card-body">
         <h5 class="card-title">{{IAuthor.name}}</h5>
         <p class="card-text"><small class="text-secondary font-italic">{{IAuthor.bornYear}}
           -{{IAuthor.dieYear}}</small></p>
-        <p class="card-text" >{{IAuthor.about}}
+        <p class="card-text">{{IAuthor.about}}
           <a href="{{IAuthor.imdbPath}}" class="text-secondary font-italic">See all bio</a>
         </p>
-      <app-delete-modal
-        [IAuthor]="IAuthor"
-        (OAuthorID)="removeAuthor($event)"
-      ></app-delete-modal>
+        <app-delete-modal
+          [IAuthor]="IAuthor"
+          (OAuthorID)="removeAuthor($event)"
+        ></app-delete-modal>
       </div>
     </div>
   </div>
